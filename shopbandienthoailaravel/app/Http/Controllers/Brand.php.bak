@@ -132,14 +132,14 @@ class Brand extends Controller
             ->where('products.brand_id', $brand_product_id)
             ->get()
             ->count();
-         if ($product_of_brand > 0) {
-             return response()->json([
-              "status" => false,
-                 "message" => "Còn sản phẩm trong thương hiệu này",
-               "title"=>"Không thể xóa",
-                "type"=>"warn"
-            ]);
-         } else {
+        // if ($product_of_brand > 0) {
+        //     return response()->json([
+        //         "status" => false,
+        //         "message" => "Còn sản phẩm trong thương hiệu này",
+        //         "title"=>"Không thể xóa",
+        //         "type"=>"warn"
+        //     ]);
+        // } else {
             $result = DB::table('brands')->where('brand_id', $brand_product_id)->delete();
             if ($result) {
                 return response()->json([
