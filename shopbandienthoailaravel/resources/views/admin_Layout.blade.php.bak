@@ -27,9 +27,9 @@
     <link rel="stylesheet" href="{{ asset('public/backend/css/font.css') }}" type="text/css">
     <link href="{{ asset('public/backend/css/font-awesome.css') }}" rel="stylesheet">
     <link href="{{ asset('public/backend/css/dtlaravel.css') }}" rel="stylesheet">
-    @if(!Session::get('admin_name'))
+    {{-- @if(!Session::get('admin_name'))
     <script>window.location="/admin"</script>
-    @endif 
+    @endif --}}
 </head>
 
 <body id="page-top">
